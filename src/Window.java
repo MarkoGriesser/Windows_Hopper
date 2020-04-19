@@ -1,26 +1,13 @@
+import java.awt.Point;
 import java.io.File;
 
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 public class Window extends Obstacle
 {
-	protected ImageView obstacleIV;
-	
-    public Window(String url)
+    public Window()
     {
     	super();
-    	obstacle = new Image(new File(url).toURI().toString(), 1600, 900, false, false);
-    	obstacleIV = new ImageView(obstacle);
+    	obstacle = new ObstacleData("TestWindow", new Image(new File("textures/error1.png").toURI().toString(), 1600, 900, false, false), new Point(0, 0));
     }
-    
-    public Image getImg()
-    {
-    	return obstacle;
-    }
-
-	public ImageView getObstacleIV()
-	{
-		return obstacleIV;
-	}
 }

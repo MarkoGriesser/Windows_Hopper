@@ -1,27 +1,13 @@
+import java.awt.Point;
 import java.io.File;
 
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 public class TaskBar extends Obstacle
 {
-	protected ImageView obstacleIV;
-	
-    public TaskBar(String url)
+    public TaskBar()
     {
     	super();
-    	obstacle = new Image(new File(url).toURI().toString(), 1600, 820, false, false);
-    	obstacleIV = new ImageView(obstacle);
+    	obstacle = new ObstacleData("taskbar", new Image(new File("textures/taskBar.png").toURI().toString()), new Point(0, 900));
     }
-    
-    public Image getImg()
-    {
-    	return obstacle;
-    }
-
-	@Override
-	public ImageView getObstacleIV()
-	{
-		return obstacleIV;
-	}
 }

@@ -1,0 +1,34 @@
+{
+    "levelInfo": {
+        "levelName": "win10_1",
+        "backgroundFile": "Windows10.png",
+        "taskbarFile": "taskbar.png"
+    },
+    "obstacleIcons": [
+        {
+            "id": "powerpoint",
+            "file": "pp.png"
+        },
+        {
+            "id": "winError",
+            "file": "error1.png"
+        }
+    ],
+    "obstaclePointers": [
+        {
+            "id": "powerpoint",
+            "spawn": [ 
+                {"x": 120, "y": 120}, 
+                {"x": 8, "y": 3},
+                {"x": 4, "y": 6},
+                {"x": 2, "y": 8}
+            ]
+        },
+        {
+            "id": "winError",
+            "spawn": [
+                {"x": 6, "y": 5}
+            ]
+        }
+    ]
+}
