@@ -6,8 +6,8 @@ public class Background
 {
 	protected Image background;
 	
-	public Background()
+	public Background(Image background)
 	{
-		background = new Image(new File("textures/WindowsAlt.jpeg").toURI().toString(), 1600, 900, false, false);
+		this.background = background;
 	}
 }

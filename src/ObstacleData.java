@@ -10,7 +10,12 @@ public class ObstacleData
 	
 	public ObstacleData()
 	{
-		this("default", null, null);
+		this("default", null);
+	}
+	
+	public ObstacleData(String name, Image img)
+	{
+		this(name, img, null);
 	}
 
 	public ObstacleData(String name, Image img, Point coords)

@@ -1,16 +1,18 @@
 {
     "levelInfo": {
-        "levelName": "win10_1",
-        "backgroundFile": "Windows10.png",
+        "levelName": "winxp_1",
+        "backgroundFile": "WindowsAlt.jpeg",
         "taskbarFile": "taskbar.png"
     },
     "obstacleIcons": [
         {
             "id": "powerpoint",
+			"type": "icon",
             "file": "pp.png"
         },
         {
             "id": "winError",
+			"type": "window",
             "file": "error1.png"
         }
     ],
@@ -18,16 +20,14 @@
         {
             "id": "powerpoint",
             "spawn": [ 
-                {"x": 120, "y": 120}, 
-                {"x": 8, "y": 3},
-                {"x": 4, "y": 6},
-                {"x": 2, "y": 8}
+                {"x": 300, "y": 200}, 
+                {"x": 450, "y": 650}
             ]
         },
         {
             "id": "winError",
             "spawn": [
-                {"x": 6, "y": 5}
+                {"x": 700, "y": 500}
             ]
         }
     ]

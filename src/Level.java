@@ -2,9 +2,9 @@ public class Level
 {
 	protected LevelData level;
 	
-	public Level()
+	public Level(LevelData level)
 	{
-		level = new LevelData("TestLevel", new TaskBar(), new Background(), new Icon(), new Window());
+		this.level = level;
 	}
 	
 	public LevelData getLevel()

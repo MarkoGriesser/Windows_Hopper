@@ -3,21 +3,20 @@ public class LevelData
 	private String name;
 	private TaskBar taskbar;
 	private Background background;
-	private Icon icon;
-	private Window window;
+	private Obstacle[] obsArr;
 	
 	public LevelData()
 	{
-		this("default", null, null, null, null);
+		this("default", null, null, null);
 	}
 	
-	public LevelData(String name, TaskBar taskbar, Background background, Icon icon, Window window)
+	public LevelData(String name, TaskBar taskbar, Background background, Obstacle[] obsArr)
 	{
 		this.name = name;
 		this.taskbar = taskbar;
 		this.background = background;
-		this.icon = icon;
-		this.window = window;
+		this.obsArr = obsArr;
+		
 	}
 
 	public String getName()
@@ -50,23 +49,13 @@ public class LevelData
 		this.background = background;
 	}
 
-	public Icon getIcon()
+	public Obstacle[] getObsArr()
 	{
-		return icon;
+		return obsArr;
 	}
 
-	public void setIcon(Icon icon)
+	public void setObsArr(Obstacle[] obsArr)
 	{
-		this.icon = icon;
-	}
-
-	public Window getWindow()
-	{
-		return window;
-	}
-
-	public void setWindow(Window window)
-	{
-		this.window = window;
+		this.obsArr = obsArr;
 	}
 }
