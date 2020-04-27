@@ -1,23 +1,19 @@
+import java.io.File;
+
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class MASTER extends Application
 {
-	protected GridPane gp;
+	protected Group root;
 	protected Scene scene;
-	
-	public Icon obs;
-	public Level level1;
 	
 	public MASTER()
 	{
-		gp = new GridPane();
-		scene = new Scene(gp, 1600, 900);
-		obs = new Icon("textures/pw.png");
-		level1 = new Level("textures/WindowsAlt.jpeg", "textures/taskbar.png");
-		
+		root = new Group();
+		scene = new Scene(root);
 	}
 	
 	public static void main(String[] args)
@@ -26,16 +22,17 @@ public class MASTER extends Application
 	}
 
 	@Override
-	public void start(Stage s) throws Exception
+	public void start(Stage stage) throws Exception
 	{
-		gp.getChildren().add(level1.background.getBackgroundIV());
-		gp.getChildren().add(level1.taskBar.getObstacleIV());
-		gp.getChildren().add(obs.getObstacleIV());
+		Level level0 = new Level(Parser.getLevelData(Parser.readFile(new File("leveldata/winxp_1/winxp_1.level")), "leveldata/winxp_1/"));
+		ObstacleData[] obsDataArr = new ObstacleData[level0.level.getObsArr().length];
+		for(int i = 0; i < obsDataArr.length; i++)
+		{
+			obsDataArr[i] = level0.level.getObsArr()[i].obstacle;
+		}
+		root.getChildren().add(LevelBuilder.buildLevel(level0.level, obsDataArr));
 		
-	    s.setMaxWidth(1600);
-	    s.setMaxHeight(900);
-		
-		s.setScene(scene);
-	    s.show();
+		stage.setScene(scene);
+		stage.show();
 	}
 }

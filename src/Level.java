@@ -1,16 +1,13 @@
 public class Level
 {
-	protected Background background;
-	protected TaskBar taskBar;
-	protected Level level;
+	protected LevelData level;
 	
-	public Level(String url1, String url2)
+	public Level(LevelData level)
 	{
-		background = new Background(url1);
-		taskBar = new TaskBar(url2);
+		this.level = level;
 	}
 	
-	public Level getLevel()
+	public LevelData getLevel()
 	{
 		return level;
 	}
