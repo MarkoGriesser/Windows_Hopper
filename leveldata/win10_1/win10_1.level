@@ -1,7 +1,7 @@
 {
     "levelInfo": {
-        "levelName": "winxp_1",
-        "backgroundFile": "WindowsAlt.jpeg",
+        "levelName": "win10_1",
+        "backgroundFile": "Win10.jpeg",
         "taskbarFile": "taskbar.png"
     },
     "obstacleIcons": [
@@ -26,8 +26,7 @@
             "id": "powerpoint",
             "spawn": [ 
 				{"x": 125, "y": 800},
-                {"x": 375, "y": 650},
-				{"x": 1100, "y": 500}
+                {"x": 375, "y": 650}
             ]
         },
 		{
