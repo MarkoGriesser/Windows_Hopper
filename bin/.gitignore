@@ -11,3 +11,11 @@
 /Window.class
 >>>>>>> Dev
 /Hitbox.class
+/Player.class
+/CheckKey.class
+/IsKeyPressed$1.class
+/IsKeyPressed.class
+/CheckThread.class
+/MultithreadingDemo.class
+/Keychecker.class
+/PrimeThread.class
