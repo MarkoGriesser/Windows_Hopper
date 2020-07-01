@@ -1,8 +1,18 @@
+import javafx.scene.image.Image;
+
 public class Window extends Obstacle
 {
-    public Window(ObstacleData obstacle)
+	public Image window;
+	
+    public Window(Image window)
     {
     	super();
-    	this.obstacle = obstacle;
+    	this.window = window;
     }
+    
+	public Image getImg()
+	{
+		return window;
+		
+	}
 }

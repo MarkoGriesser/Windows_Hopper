@@ -1,8 +1,17 @@
+import javafx.scene.image.Image;
+
 public class Icon extends Obstacle
 {
-    public Icon(ObstacleData obstacle)
+	protected Image icon;
+	
+    public Icon(Image icon)
     {
     	super();
-    	this.obstacle = obstacle;
+    	this.icon = icon;
     }
+    
+	public Image getImg()
+	{
+		return icon;
+	}
 }

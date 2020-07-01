@@ -8,4 +8,9 @@ public class Background
 	{
 		this.background = background;
 	}
+	
+	public Image getImg()
+	{
+		return background;
+	}
 }
