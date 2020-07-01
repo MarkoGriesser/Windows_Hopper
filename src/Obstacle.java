@@ -1,9 +1,11 @@
+import javafx.scene.image.Image;
+
 public abstract class Obstacle
 {
-	protected ObstacleData obstacle;
-	
-	public ObstacleData getObs()
+	public Obstacle()
 	{
-		return obstacle;
+		
 	}
+	
+	public abstract Image getImg();
 }
