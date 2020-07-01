@@ -1,7 +1,4 @@
-import java.awt.event.KeyListener;
 import java.io.File;
-
-import javax.swing.JTextField;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -14,18 +11,12 @@ import javafx.stage.WindowEvent;
 
 public class Master extends Application
 {
-<<<<<<< HEAD
-	protected Group root;
-	protected Scene scene;
-	protected Thread thread;
-=======
 	private Group root;
 	private Scene game;
 //	private Scene menu;
 	private Player p;
 	private LevelData ld;
 	private Engine engine;
->>>>>>> Dev
 	
 	public Master()
 	{
@@ -53,11 +44,6 @@ public class Master extends Application
 		    }
 		});
 		
-<<<<<<< HEAD
-		root.getChildren().add(Player.getPlayer());
-		
-		stage.setScene(scene);
-=======
 		ld.setName("Level1");
 		ld.setBackground(new Background(new Image(new File("textures_all/WindowsAlt.jpeg").toURI().toString())));
 		ld.setTaskbar(new TaskBar(new Image(new File("textures_all/taskbar.png").toURI().toString())));
@@ -116,7 +102,6 @@ public class Master extends Application
 		root.getChildren().add(ld.canvas);
 		
 		stage.setScene(game);
->>>>>>> Dev
 		stage.show();
 	}
 }
