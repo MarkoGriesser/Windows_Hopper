@@ -24,7 +24,7 @@ public class Engine extends Thread
 		{
 			if(direction == "down")
 			{
-				if(fc == 900)
+				if(fc == 1500)
 				{
 					if(p.posY < 800)
 					{
@@ -35,12 +35,12 @@ public class Engine extends Thread
 					fc = 0;
 				}
 				fc++;
-				System.out.println(p.posY);
+				System.out.println();
 			}
 			
 			else if(direction == "up")
 			{
-				if(fc == 900)
+				if(fc == 1500)
 				{
 					if(p.posY > currentPosY - p.sprunghoehe)
 					{
@@ -55,7 +55,7 @@ public class Engine extends Thread
 					fc = 0;
 				}
 				fc++;
-				System.out.println(p.posY);
+				System.out.println();
 			}
 		}
 }

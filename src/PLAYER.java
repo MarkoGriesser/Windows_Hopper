@@ -11,7 +11,7 @@ public class Player
 	
 	public Player()
 	{
-		img = new Image(new File("textures_all/bluejay.png").toURI().toString());
+		img = new Image(new File("textures_all/bluejayFR.png").toURI().toString());
 		posX = 0;
 		posY = 800;
 		sprunghoehe = 150;

@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -13,10 +14,10 @@ public class Master extends Application
 {
 	private Group root;
 	private Scene game;
-//	private Scene menu;
 	private Player p;
 	private LevelData ld;
 	private Engine engine;
+	private boolean first;
 	
 	public Master()
 	{
@@ -25,6 +26,7 @@ public class Master extends Application
 		p = new Player();
 		ld = new LevelData(p);
 		engine = new Engine(p, ld);
+		first = true;
 	}
 	
 	public static void main(String[] args)
@@ -54,18 +56,18 @@ public class Master extends Application
 		ld.resetImg();
 		ld.drawPlayer();
 		
-//		engine.checkKey();
-		
 		game.setOnKeyPressed(new EventHandler<KeyEvent>()
 		{
 			@Override
             public void handle(KeyEvent event)
 			{
+				
                 switch (event.getCode())
                 {
                     case A:
                     	if(p.posX > 0)
                     	{
+                    		p.setImg(new Image(new File("textures_all/bluejayFL.png").toURI().toString()));
                     		ld.resetImg();
                     		p.moveLeft();
                     		ld.drawPlayer();
@@ -75,6 +77,7 @@ public class Master extends Application
                     case D:
                     	if(p.posX < ld.canvas.getWidth() - p.getImg().getWidth())
                     	{
+                    		p.setImg(new Image(new File("textures_all/bluejayFR.png").toURI().toString()));
                     		ld.resetImg();
                     		p.moveRight();
                     		ld.drawPlayer();
@@ -82,10 +85,19 @@ public class Master extends Application
                     break;
                     
                     case ESCAPE:
-                    	ld.setBackground(new Background(new Image(new File("textures_all/Win10.jpeg").toURI().toString())));
-                    	ld.gc.drawImage(ld.getBackground().background, 0, 0);
-                    	ld.resetImg();
-                    	ld.drawPlayer();
+                    	if(first)
+                    	{
+                    		ld.gc.setFill(Color.BLACK);
+                        	ld.gc.fillRect(0, 0, 1600, 900);
+                    		ld.drawPauseMenu();
+                        	first = false;
+                    	}
+                    	else
+                    	{
+                    		ld.resetImg();
+                    		ld.drawPlayer();
+                    		first = true;
+                    	}
                     break;
                     
                     case SPACE:

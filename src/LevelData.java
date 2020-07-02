@@ -1,5 +1,8 @@
+import java.io.File;
+
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 
 public class LevelData
 {
@@ -10,6 +13,11 @@ public class LevelData
 	public GraphicsContext gc;
 	public Canvas canvas;
 	private Obstacle obs;
+	private Obstacle obs2;
+	private Obstacle obs3;
+	private Obstacle obs4;
+	private Obstacle obs5;
+	private Obstacle obs6;
 	
 	public LevelData(Player p)
 	{
@@ -69,6 +77,16 @@ public class LevelData
 	public void drawPlayer()
 	{
 		gc.drawImage(p.getImg(), p.posX, p.posY);
-//		System.out.println(p.posY);
+	}
+	
+	public void drawPauseMenu()
+	{
+		gc.drawImage(new Image(new File("textures_all/logo.gif").toURI().toString()), 150, 0);
+	}
+	
+	public void drawMenu()
+	{
+		gc.drawImage(new Image(new File("textures_all/logo.gif").toURI().toString()), 150, 0);
+		gc.drawImage(new Image(new File("textures_all/play.gif").toURI().toString()), 10, 800);
 	}
 }
