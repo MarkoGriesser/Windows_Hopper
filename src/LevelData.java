@@ -12,11 +12,10 @@ public class LevelData
 	private Player p;
 	public GraphicsContext gc;
 	public Canvas canvas;
-	private Obstacle obs; 
+	private Obstacle obs;
 	
 	public LevelData(Player p)
 	{
-//		this("default", null, null, null);
 		canvas = new Canvas(1600, 900);
 		gc = canvas.getGraphicsContext2D();
 		this.p = p;
@@ -66,7 +65,6 @@ public class LevelData
 	{
 		gc.drawImage(getBackground().getImg(), 0, 0);
 		gc.drawImage(getTaskbar().getImg(), 0, canvas.getHeight() - getTaskbar().taskbar.getHeight());
-		gc.drawImage(getObs().getImg(), 150, 800);
 	}
 	
 	public void drawPlayer()
