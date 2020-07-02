@@ -12,12 +12,7 @@ public class LevelData
 	private Player p;
 	public GraphicsContext gc;
 	public Canvas canvas;
-	private Obstacle obs;
-	private Obstacle obs2;
-	private Obstacle obs3;
-	private Obstacle obs4;
-	private Obstacle obs5;
-	private Obstacle obs6;
+	private Obstacle obs; 
 	
 	public LevelData(Player p)
 	{
